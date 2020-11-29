@@ -1,0 +1,32 @@
+<view class="section">
+  <view class="tui-table-view">
+    <view class="tui-col-3" bindtap="addPopularScience">
+      <icon class="iconfont icon-kepujiaoyu"></icon>
+      <view>添加科普</view>
+    </view>
+    <view class="tui-col-3" bindtap="toPopularScienceList">
+      <icon class="iconfont icon-list"></icon>
+      <view>科普列表</view>
+    </view>
+    <view class="tui-col-3" bindtap="addPetNews">
+      <icon class="iconfont icon-xinwen"></icon>
+      <view>添加新闻</view>
+    </view>
+    <view class="tui-col-3" bindtap="toPetNewsList">
+      <icon class="iconfont icon-list"></icon>
+      <view>新闻列表</view>
+    </view>
+    <view class="tui-col-3" bindtap="toOrderlist">
+      <icon class="iconfont icon-list"></icon>
+      <view>预约列表</view>
+    </view>
+    <view class="tui-col-3" bindtap="toChatlist">
+      <icon class="iconfont icon-list"></icon>
+      <view>聊天列表</view>
+    </view>
+    <view class="tui-col-3" bindtap="toAbout">
+      <icon class="iconfont icon-guanyuwomen"></icon>
+      <view>关于我们</view>
+    </view>
+  </view>
+</view>

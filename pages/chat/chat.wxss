@@ -1,0 +1,10 @@
+.doctor-item {
+  display: flex;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+}
+
+.doctor-icon {
+  width: 300rpx;
+  height: 200rpx;
+}

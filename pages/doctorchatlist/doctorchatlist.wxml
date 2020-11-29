@@ -1,0 +1,11 @@
+<block wx:for="{{users}}">
+  <view class="doctor-item" bindtap="toDetail" data-id="{{item.userId}}">
+    <image src="{{baseURL+item.userIcon}}" class="doctor-icon"></image>
+    <view>
+      <view>姓名：{{item.userRealname}}</view>
+      <view>性别：{{item.userGender}}</view>
+      <view>昵称：{{item.userNickname}}</view>
+      <view>邮箱：{{item.userEmail}}</view>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,14 @@
+<view>
+  <scroll-view class="container" scroll-y bindscrolltolower="lower">
+    <block wx:for="{{chats}}">
+      <view wx:if="{{item.senderType == 1}}">用户说:{{item.message}}</view>
+      <view wx:if="{{item.senderType == 0}}">医生说:{{item.message}}</view>
+    </block>
+  </scroll-view>
+
+  <view class="chat-view">
+    <input class="chat-input" type="text" bindinput="setMessage" value="{{message}}" />
+    <button class="chat-btn" bindtap="send">发送</button>
+  </view>
+
+</view>

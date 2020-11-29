@@ -1,0 +1,34 @@
+<view style='height:100vh;'>
+  <scroll-view scroll-y style='height:92vh'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src='{{item}}' style='height:60vh;' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='freight'>
+      <view class='left'>
+        宠物名称:{{info.petName}}
+      </view>
+    </view>
+    <view class='tab'>
+      <view class='left' bindtap="tabFun" data-state="{{1}}">
+        <text class='{{tabIs?"tab-acitve":""}}'>预约信息</text>
+      </view>
+      <view class='right' bindtap="tabFun" data-state="{{2}}">
+        <text class='{{!tabIs?"tab-acitve":""}}'>宠物信息</text>
+      </view>
+    </view>
+    <view class='content' wx:if="{{tabIs}}">
+      <view>医生姓名：{{info.doctorName}}</view>
+      <view>预约时间：{{info.ordertime}}</view>
+    </view>
+    <view class='content' wx:if="{{!tabIs}}">
+      <view>主人姓名：{{info.realname}}</view>
+      <view>主人电话：{{info.phone}}</view>
+      <view>宠物名称：{{info.petName}}</view>
+      <view>宠物症状：{{info.symptom}}</view>
+    </view>
+  </scroll-view>
+</view>

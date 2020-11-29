@@ -1,0 +1,28 @@
+<view class="main">
+  <view class='data'>
+    <view class='item'>
+      <text>宠物名称</text>
+      <input type='text' value="{{name}}" bindinput="bindKeyName" placeholder='请填写姓名'></input>
+    </view>
+    <view class='item'>
+      <text>宠物类型</text>
+      <picker bindchange="bindCategoryChange" range="{{categories}}" value="{{category}}">
+        <view class="picker">
+          {{category}}
+        </view>
+      </picker>
+      <view class='icon'>
+        <image src='/images/my_order.png'></image>
+      </view>
+    </view>
+    <view class="container">
+      <button bindtap='chooseImageTap'>上传图片</button>
+        <block wx:if="{{petIcon == ''}}">
+        </block>
+        <block wx:if="{{petIcon != ''}}">
+          <image src='{{baseURL + petIcon}}'></image>
+        </block>
+    </view>
+  </view>
+  <view class='btn active' bindtap='submitFun'>保存</view>
+</view>

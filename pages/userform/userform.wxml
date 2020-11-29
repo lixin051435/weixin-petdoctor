@@ -1,0 +1,84 @@
+<view>
+  <form class="weui-cells weui-cells_form" bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>
+    <view class="weui-cells">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">用户昵称</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name="nickname" data-obj="user" data-item="userNickname" value="{{user.userNickname}}" bindinput="inputedit" placeholder="请输入" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">真实姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" data-obj="user" data-item="userRealname" bindinput="inputedit" value="{{user.userRealname}}"  placeholder="请输入" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">用户密码</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{user.userPassword}}" name="password" data-obj="user" data-item="userPassword" bindinput="inputedit" placeholder="请输入" />
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-label">用户性别</view>
+        <picker range="{{genders}}" value="{{gender}}" bindchange="selectGender">
+          <view>
+            {{gender}}
+          </view>
+        </picker>
+        <view class='weui-cell__ft arrow_right'></view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">用户邮箱</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" data-obj="user" value="{{user.userEmail}}" data-item="userEmail" bindinput="inputedit" placeholder="请输入" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">用户电话</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{user.userPhone}}" data-obj="user" data-item="userPhone" bindinput="inputedit" placeholder="请输入" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">用户地址</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" data-obj="user" value="{{user.userAddress}}" data-item="userAddress" bindinput="inputedit" placeholder="请输入" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">用户头像</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="container">
+            <button bindtap='chooseImageTap'>上传图片</button>
+             <block wx:if="{{userIcon == ''}}">
+            </block>
+            <block wx:if="{{userIcon != ''}}">
+             <image src='{{baseURL + userIcon}}'></image>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <button formType="submit" class="btn btn_bottom" hover-class="pressed_btn">提交</button>
+  </form>
+</view>

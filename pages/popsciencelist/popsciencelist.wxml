@@ -1,0 +1,9 @@
+<block wx:for="{{infos}}">
+  <view class="doctor-item" bindtap="toDetail" data-id="{{item.infoId}}">
+    <image src="{{baseURL+item.infoIcon}}" class="doctor-icon"></image>
+    <view class="main-detail">
+      <view class="title">{{item.infoTitle}}</view>
+      <view class="time">admin {{item.createtime}}</view>
+    </view>
+  </view>
+</block>

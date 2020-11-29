@@ -1,0 +1,17 @@
+<view style='height:100vh;'>
+  <scroll-view scroll-y style='height:92vh;'>
+    <view class='list'>
+      <view class='item' wx:for="{{list}}">
+        <navigator hover-class="none" url="/pages/details/details?id={{item.petId}}">
+          <view bindlongpress="handleLongPress" data-petId='{{item.petId}}'>
+            <image class='product' src='{{baseURL + item.petIcon}}'></image>
+            <text class='text'>{{item.petName}}</text>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <navigator url="/pages/petAdd/petAdd" class='btn' style="width:100%;">
+    新增宠物
+  </navigator>
+</view>

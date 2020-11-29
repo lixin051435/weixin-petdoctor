@@ -1,0 +1,10 @@
+@import '../index/index.wxss';
+
+.btn{
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+  background:#ff5f19;
+  font-size: 14px;
+  color: #fff;
+}

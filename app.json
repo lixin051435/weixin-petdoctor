@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/adminIndex/adminIndex",
+    "pages/doctorlist/doctorlist",
+    "pages/mine/mine",
+    "pages/order/order",
+    "pages/chat/chat",
+    "pages/petlist/petlist",
+    "pages/petitem/petitem",
+    "pages/mypets/mypets",
+    "pages/petAdd/petAdd",
+    "pages/details/details",
+    "pages/myInfo/myInfo",
+    "pages/doctorform/doctorform",
+    "pages/userlist/userlist",
+    "pages/orderlist/orderlist",
+    "pages/about/about",
+    "pages/updatePass/updatePass",
+    "pages/userform/userform",
+    "pages/popscienceform/popscienceform",
+    "pages/petnewsform/petnewsform",
+    "pages/petnewslist/petnewslist",
+    "pages/popsciencelist/popsciencelist",
+    "pages/orderdoclist/orderdoclist",
+    "pages/doctordetail/doctordetail",
+    "pages/orderdetail/orderdetail",
+    "pages/doctorIndex/doctorIndex",
+    "pages/doctororder/doctororder",
+    "pages/chatdetail/chatdetail",
+    "pages/doctorchatlist/doctorchatlist"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/首页-正常.png",
+        "selectedIconPath": "./images/首页-选中.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/orderdoclist/orderdoclist",
+        "iconPath": "./images/订单白.png",
+        "selectedIconPath": "./images/订单蓝.png",
+        "text": "医生"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "iconPath": "./images/咨询白.png",
+        "selectedIconPath": "./images/咨询蓝.png",
+        "text": "咨询"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "./images/我的-正常.png",
+        "selectedIconPath": "./images/我的-选中.png",
+        "text": "我的"
+      }
+    ],
+    "backgroundColor": "#ffffff",
+    "color": "#37383B",
+    "selectedColor": "#2A98BD"
+  },
+  "sitemapLocation": "sitemap4.json"
+}

@@ -1,0 +1,25 @@
+.doctor-item {
+  display: flex;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+}
+
+.doctor-icon {
+  width: 30%;
+  height: 100px;
+}
+
+.title {
+  font-size: 15px;
+}
+
+.time {
+  color: gray;
+}
+
+.main-detail {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

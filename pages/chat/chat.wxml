@@ -1,0 +1,11 @@
+<block wx:for="{{doctors}}">
+  <view class="doctor-item" bindtap="toDetail" data-id="{{item.doctorId}}">
+    <image src="{{baseURL+item.doctorIcon}}" class="doctor-icon"></image>
+    <view>
+      <view>姓名：{{item.doctorRealname}}</view>
+      <view>性别：{{item.doctorGender}}</view>
+      <view>职称：{{item.doctorTitle}}</view>
+      <view>领域：{{item.lawyerField}}</view>
+    </view>
+  </view>
+</block>

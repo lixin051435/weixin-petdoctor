@@ -1,0 +1,22 @@
+<view class='main'>
+  <view class='tab'>
+    <view bindtap='tabFun' data-index="{{0}}">
+      <text class='{{tabIndex==0?"active":""}}'>已预约</text>
+    </view>
+    <view bindtap='tabFun' data-index="1">
+      <text class='{{tabIndex==1?"active":""}}'>已完成</text>
+    </view>
+  </view>
+
+  <block wx:for="{{list}}">
+    <view class="doctor-item" bindtap="toDetail" data-id="{{item.orderId}}">
+      <image src="{{baseURL+item.petIcon}}" class="doctor-icon"></image>
+      <view>
+        <view>医生姓名：{{item.doctorName}}</view>
+        <view>用户姓名：{{item.realname}}</view>
+        <view>宠物名称：{{item.petName}}</view>
+        <view>宠物症状：{{item.symptom}}</view>
+      </view>
+    </view>
+  </block>
+</view>

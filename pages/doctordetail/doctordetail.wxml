@@ -1,0 +1,114 @@
+<view>
+  <form class="weui-cells weui-cells_form" bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>
+    <view class="weui-cells">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">医生昵称</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name="nickname" data-obj="doctor" data-item="doctorNickname" value="{{doctor.doctorNickname}}" bindinput="inputedit" placeholder="请输入" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">真实姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" data-obj="doctor" data-item="doctorRealname" bindinput="inputedit" value="{{doctor.doctorRealname}}" disabled placeholder="请输入" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">医生密码</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{doctor.doctorPassword}}" name="password" data-obj="doctor" data-item="doctorPassword" bindinput="inputedit" disabled placeholder="请输入" />
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-label">医生性别</view>
+        <picker range="{{genders}}" value="{{gender}}" disabled bindchange="selectGender">
+          <view>
+            {{gender}}
+          </view>
+        </picker>
+        <view class='weui-cell__ft arrow_right'></view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">擅长领域</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" data-obj="doctor" value="{{doctor.lawyerField}}" data-item="lawyerField" disabled bindinput="inputedit" placeholder="请输入" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">医生职称</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" disabled value="{{doctor.doctorTitle}}" data-obj="doctor" data-item="doctorTitle" bindinput="inputedit" placeholder="请输入" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">描述信息</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" data-obj="doctor" value="{{doctor.doctorDescription}}" disabled data-item="doctorDescription" bindinput="inputedit" placeholder="请输入" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">医生头像</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="container">
+            <block wx:if="{{doctorIcon == ''}}">
+            </block>
+            <block wx:if="{{doctorIcon != ''}}">
+              <image src='{{baseURL + doctorIcon}}'></image>
+            </block>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cell">
+        <view class="weui-label">预约日期</view>
+        <picker mode="date" value="{{date}}" bindchange="setOrderTime">
+          <view>
+            {{date}}
+          </view>
+        </picker>
+        <view class='weui-cell__ft arrow_right'></view>
+      </view>
+
+       <view class="weui-cell">
+        <view class="weui-label">选择宠物</view>
+        <picker mode="selector" range-key="petName" range="{{pets}}" value="{{pet}}" bindchange="selectPet">
+          <view>
+            {{pet.petName}}
+          </view>
+        </picker>
+        <view class='weui-cell__ft arrow_right'></view>
+      </view>
+
+       <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">宠物症状</view>
+        </view>
+        <view class="weui-cell__bd">
+          <textarea style="height:150px;" class="weui-input"  bindinput="setSymptom" value="{{symptom}}" placeholder="请输入" />
+        </view>
+      </view>
+
+
+    </view>
+
+    <button formType="submit" class="btn btn_bottom" hover-class="pressed_btn">点我预约</button>
+  </form>
+</view>

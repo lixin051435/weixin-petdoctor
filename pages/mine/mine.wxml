@@ -1,0 +1,50 @@
+<scroll-view scroll-y style='height:100vh;'>
+  <view class='top'>
+    <view>
+       <view class='img'><open-data type="userAvatarUrl"></open-data></view><view class='text'><open-data type="userNickName"></open-data></view>
+    </view>
+  </view>
+  <navigator url="/pages/order/order" class='item'>
+    <view class='left'>
+      我的预约
+    </view>
+    <view class='right'>
+      <text>查看全部预约</text>
+      <image src='/images/my_order.png'></image>
+    </view>
+  </navigator>
+  <view class='icon'>
+    <navigator url="/pages/order/order?type=0" hover-class="none" >
+      <image src='/images/already_shipped.png' mode="aspectFit"></image>
+      <text>已预约</text>
+    </navigator>
+    <navigator url="/pages/order/order?type=1" hover-class="none" >
+      <image src='/images/completed.png' mode="aspectFit"></image>
+      <text>已完成</text>
+    </navigator>
+  </view>
+  <navigator url="/pages/mypets/mypets" class='item'>
+    <view class='left'>
+      我的宠物
+    </view>
+    <view class='right'>
+      <image src='/images/my_order.png'></image>
+    </view>
+  </navigator>
+  <navigator url="/pages/myInfo/myInfo" class='item'>
+    <view class='left'>
+      修改密码
+    </view>
+    <view class='right'>
+      <image src='/images/my_order.png'></image>
+    </view>
+  </navigator>
+  <navigator url="/pages/login/login" class='item'>
+    <view class='left'>
+      切换用户
+    </view>
+    <view class='right'>
+      <image src='/images/my_order.png'></image>
+    </view>
+  </navigator>
+</scroll-view>

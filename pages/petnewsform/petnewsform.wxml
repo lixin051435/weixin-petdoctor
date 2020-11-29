@@ -1,0 +1,40 @@
+<view>
+  <form class="weui-cells weui-cells_form" bindsubmit="formSubmit" bindreset="formReset" report-submit='true'>
+    <view class="weui-cells">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">新闻标题</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" data-obj="info" data-item="infoTitle" value="{{info.infoTitle}}" bindinput="inputedit" placeholder="请输入" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">新闻内容</view>
+        </view>
+        <view class="weui-cell__bd">
+          <textarea style="height:150px;" class="weui-input" data-obj="info" data-item="infoContent" bindinput="inputedit" value="{{info.infoContent}}" placeholder="请输入" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">新闻图标</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="container">
+            <button bindtap='chooseImageTap'>上传图片</button>
+             <block wx:if="{{icon == ''}}">
+            </block>
+            <block wx:if="{{icon != ''}}">
+             <image src='{{baseURL + icon}}'></image>
+            </block>
+          </view>
+        </view>
+      </view>
+
+    </view>
+    <button formType="submit" class="btn btn_bottom" hover-class="pressed_btn">提交</button>
+  </form>
+</view>

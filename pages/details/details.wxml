@@ -1,0 +1,30 @@
+<view style='height:100vh;'>
+  <scroll-view scroll-y style='height:92vh'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src='{{item}}' style='height:60vh;' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='freight'>
+      <view class='left'>
+        宠物名称:{{pet.petName}}
+      </view>
+    </view>
+    <view class='tab'>
+      <view class='left' bindtap="tabFun" data-state="{{1}}">
+        <text class='{{tabIs?"tab-acitve":""}}'>详情信息</text>
+      </view>
+      <view class='right' bindtap="tabFun" data-state="{{2}}">
+        <text class='{{!tabIs?"tab-acitve":""}}'>其他信息</text>
+      </view>
+    </view>
+    <view class='content' wx:if="{{tabIs}}">
+      无
+    </view>
+    <view class='content' wx:if="{{!tabIs}}">
+      无
+    </view>
+  </scroll-view>
+</view>
