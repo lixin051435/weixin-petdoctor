@@ -60,16 +60,3 @@
   background: #fff;
   padding: 10px 20px;
 }
-
-.btn{
-  line-height: 46px;
-  background: #E5E5E5;
-  font-size: 18px;
-  color: #FFFFFF;
-  text-align:center;
-  margin:50px 30px;
-  border-radius:2px;
-}
-.active{
-  background:#ff5f19;
-}

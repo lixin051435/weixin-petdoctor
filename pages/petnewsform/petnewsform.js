@@ -29,6 +29,7 @@ Page({
   formSubmit(e) {
     let url = "/info/save";
     let form = this.data.info;
+    let from = this.data.from;
     form.infoIcon = this.data.icon;
     form.createtime = new Date();
     app.wxRequest("post", url, form, (res) => {
@@ -39,9 +40,16 @@ Page({
           duration: 2000
         });
 
-        wx.navigateTo({
-          url: '/pages/petnewslist/petnewslist'
-        })
+        if(from == 'news'){
+          wx.navigateTo({
+            url: '/pages/petnewslist/petnewslist'
+          })
+        }else if(from == 'science'){
+          wx.navigateTo({
+            url: '/pages/popsciencelist/popsciencelist'
+          })
+        }
+        
       } else {
         console.log("提交失败");
       }
@@ -99,11 +107,13 @@ Page({
    */
   onLoad: function(options) {
     let infoId = options.infoId;
+    let from = options.from;
     let that = this;
     if (infoId != undefined) {
       app.wxRequest("get", "/info/get/" + infoId, {}, (res) => {
         this.setData({
           info: res,
+          from:from,
           icon: res.infoIcon || ''
         })
       })

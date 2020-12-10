@@ -25,7 +25,7 @@ Page({
   toDetail(e) {
     let id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/orderdetail/orderdetail?orderId=' + id,
+      url: '/pages/orderdetail/orderdetail?isDoctor=1&orderId=' + id,
     })
   },
   /**

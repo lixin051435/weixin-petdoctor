@@ -94,7 +94,7 @@ picker view {
 /* 按钮显示90%且有上间距 */
 .btn {
   margin-top: 40rpx;
-  width: 90%;
+  width: 80%;
   color: #2A98BD;
   border: 2rpx solid #2A98BD;
   border-radius: 20rpx;

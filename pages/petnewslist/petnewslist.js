@@ -26,7 +26,7 @@ Page({
   toDetail(e) {
     let id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/petnewsform/petnewsform?infoId=' + id,
+      url: '/pages/petnewsform/petnewsform?from=news&infoId=' + id,
     })
   },
   /**

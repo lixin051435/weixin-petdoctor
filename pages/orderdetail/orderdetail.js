@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isDoctor:'',
     baseURL: 'http://localhost:8888/petdoc/',
     imgUrls: [],
     info: {},
@@ -15,7 +16,8 @@ Page({
     duration: 1000,
     tabIs: true,
     specIs: false,
-    data: null
+    data: null,
+    solution:'暂无'
   },
   tabFun(e) {
     if (e.currentTarget.dataset.state == 1) {
@@ -28,11 +30,31 @@ Page({
       })
     }
   },
+  setSolution(e){
+    let solution = e.detail.value;
+    this.setData({
+      solution:solution
+    })
+  },
+  submit(){
+    let solution = this.data.solution;
+    let form = this.data.info;
+    form.solution = solution;
+    form.orderstatus = 1;
+    form.createtime = null;
+    app.wxRequest("post", "/order/update", form, (res) => {
+      wx.showModal({
+        title: '提示',
+        content: '治疗成功'
+      });
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    let isDoctor = options.isDoctor;
     let orderId = options.orderId;
     let that = this;
     if (orderId != undefined) {
@@ -40,10 +62,11 @@ Page({
         let icon = that.data.baseURL + res.petIcon;
         let imgs = [icon];
         that.setData({
+          isDoctor:isDoctor,
           info: res,
+          solution:res.solution || '暂无',
           imgUrls: imgs
         })
-        console.log()
       })
     }
   },

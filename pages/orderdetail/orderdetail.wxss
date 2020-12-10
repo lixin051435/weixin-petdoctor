@@ -183,5 +183,17 @@ swiper{
   color: #ff5f19 !important;
 }
 .content{
-  width: 600rpx;
+  width:750rpx;
+}
+.btn{
+  line-height: 46px;
+  background: #E5E5E5;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align:center;
+  margin:50px 30px;
+  border-radius:2px;
+}
+.active{
+  background:#ff5f19;
 }

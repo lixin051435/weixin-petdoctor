@@ -13,11 +13,11 @@
       </block>
   </swiper>
   <view class='icon'>
-    <navigator hover-class="none" url="/pages/list/index?title=节日&id=5b8f45f2afb7c17788e11994">
+    <navigator hover-class="none" url="/pages/popsciencelist/popsciencelist">
       <image src='/images/festival.png' mode="aspectFit"></image>
       <text>宠物知识</text>
     </navigator>
-     <navigator hover-class="none" url="/pages/list/index?title=节日&id=5b8f45f2afb7c17788e11994">
+     <navigator hover-class="none" url="/pages/petnewslist/petnewslist">
       <image src='/images/festival.png' mode="aspectFit"></image>
       <text>宠物新闻</text>
     </navigator>

@@ -28,8 +28,12 @@ Page({
         wx.setStorageSync("session_admin", res);
         wx.showModal({
           title: '提示',
-          content: '修改成功'
+          content: '修改成功，下次登录生效'
         })
+
+        // wx.navigateTo({
+        //   url: '/pages/login/login',
+        // })
       })
     } else {
       wx.showModal({
