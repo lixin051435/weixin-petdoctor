@@ -7,7 +7,28 @@ Page({
    */
   data: {
     baseURL: "http://localhost:8888/petdoc/",
+    realname: '',
     infos: []
+  },
+  setRealname(e) {
+    let realname = e.detail.value;
+    this.setData({
+      realname: realname
+    })
+  },
+  search() {
+    let realname = this.data.realname;
+    let doctorId = wx.getStorageSync("session_doctor").doctorId;
+    let form = {
+      realname: realname,
+      doctorId: doctorId
+    };
+    let that = this;
+    app.wxRequest("post", "/order/doctorSearch", form, (res) => {
+      that.setData({
+        infos: res
+      })
+    })
   },
 
   /**
@@ -16,7 +37,7 @@ Page({
   onLoad: function (options) {
     let that = this;
     let doctorId = wx.getStorageSync("session_doctor").doctorId;
-    app.wxRequest("get", "/order/getByDoctorId/"+doctorId, {}, (res) => {
+    app.wxRequest("get", "/order/getByDoctorId/" + doctorId, {}, (res) => {
       that.setData({
         infos: res
       })

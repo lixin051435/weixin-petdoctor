@@ -14,7 +14,7 @@
           <view class="weui-label">用户密码</view>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" name="password" data-item="password" bindinput="inputedit" value="{{password}}" placeholder="请输入"/>
+          <input class="weui-input" type="password" name="password" data-item="password" bindinput="inputedit" value="{{password}}" placeholder="请输入"/>
         </view>
       </view>
        <view class="weui-cell">

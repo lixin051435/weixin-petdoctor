@@ -1,3 +1,7 @@
+<view class="search-view">
+  <input class="search-input" type="text" bindinput="setRealname" placeholder="请输入用户姓名" />
+  <view class="search-btn" bindtap="search">搜索</view>
+</view>
 <block wx:for="{{infos}}">
   <view class="doctor-item" bindtap="toDetail" data-id="{{item.orderId}}">
     <image src="{{baseURL+item.petIcon}}" class="doctor-icon"></image>

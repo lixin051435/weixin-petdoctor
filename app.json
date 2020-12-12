@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/orderlist/orderlist",
     "pages/index/index",
     "pages/adminIndex/adminIndex",
     "pages/doctorlist/doctorlist",
@@ -15,7 +16,6 @@
     "pages/myInfo/myInfo",
     "pages/doctorform/doctorform",
     "pages/userlist/userlist",
-    "pages/orderlist/orderlist",
     "pages/about/about",
     "pages/updatePass/updatePass",
     "pages/userform/userform",

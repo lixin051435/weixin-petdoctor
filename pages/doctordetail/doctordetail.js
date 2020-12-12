@@ -73,13 +73,16 @@ Page({
     app.wxRequest("post", url, data, (res) => {
       if (res) {
         wx.showToast({
-          title: '提交成功',
+          title: '付款成功',
           icon: 'success',
           duration: 2000
+          // success: function () {
+          //   wx.navigateBack({
+          //     changed: true
+          //   }); //返回上一页
+          // }
         });
-        wx.navigateBack({
-          changed: true
-        }); //返回上一页
+
       } else {
         console.log("提交失败");
       }
@@ -88,7 +91,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     let doctorId = options.doctorId;
     let that = this;
     if (doctorId != undefined) {
@@ -117,49 +120,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })
