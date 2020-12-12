@@ -29,7 +29,8 @@
     "pages/doctorIndex/doctorIndex",
     "pages/doctororder/doctororder",
     "pages/chatdetail/chatdetail",
-    "pages/doctorchatlist/doctorchatlist"
+    "pages/doctorchatlist/doctorchatlist",
+    "pages/infopage/infopage"
   ],
   "window": {
     "backgroundTextStyle": "light",

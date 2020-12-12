@@ -1,0 +1,9 @@
+<view>
+  <view class="info-title">
+    标题：{{info.infoTitle}}
+  </view>
+  <view class="line"></view>
+  <view class="info-content">
+    {{info.infoContent}}
+  </view>
+</view>
